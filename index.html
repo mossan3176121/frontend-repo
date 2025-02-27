@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>AddictEng</title>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="script.js" defer></script>
+    </head>
+    <div class="container">
+        <body>
+            <div class="header" id="header">
+                <div class="header_item" style="grid-column: span 2;">
+                    <h1 class="site_name">AdictEng</h1>
+                </div>
+            </div>
+            <div class="grid-container">
+                <!-- 問題番号 -->
+                <div class="question_number_area" style="grid-column: span 2;"></div>
+                <div class="question_number_area" style="grid-column: span 2;">
+                    <div id="questionNumArea"></div>
+                </div>
+                <div class="question_number_area" style="grid-column: span 6;">
+                    <div id="phraseArea"></div>
+                </div>
+                <div class="question_number_area" style="grid-column: span 2;"></div>
+                <!-- 入力画面 -->
+                <div class="text_area" style="grid-column: span 2;"></div>
+                <div class="text_area" style="grid-column: span 8;" id="input_text">
+                    <!-- <textarea id="input_text" type="text" placeholder="ここに入力してください"></textarea> -->
+                </div>
+                <div class="text_area" style="grid-column: span 2;"></div>
+                <!-- 入力場面ここまで -->
+                <!-- 再生ボタンの行 -->
+                <div class="button_area" style="grid-column: span 2;"></div>
+                <div class="button_area" style="grid-column: span 2;">
+                    <button class="custom_button" id="back_button">Back</button>
+                </div>
+                <div class="button_area" style="grid-column: span 4;" id="audio"></div>
+                <div class="button_area" style="grid-column: span 2;">
+                    <button class="custom_button" id="next_button">Next</button>
+                </div>
+                <div class="button_area" style="grid-column: span 2;"></div>
+                <!-- show answer -->
+                <div class="button_area" style="grid-column: span 2;">
+                    <!-- <button class="custom_button">back</button> -->
+                </div>
+                <div class="button_area" style="grid-column: span 2;">
+                    <button class="custom_button" id="answer_button">Show answer</button>
+                </div>
+                <div class="button_area" style="grid-column: span 2;">
+                    <button class="custom_button" id="clear_button">Clear</button>
+                </div>
+                <div class="button_area" style="grid-column: span 2;">
+                    <button class="custom_button" id="reset_button">Reset</button>
+                </div>
+                <div class="button_area" style="grid-column: span 2;">
+                    <button class="custom_button" id="shuffle_button">Shuffle</button>
+                </div>
+                <div class="button_area" style="grid-column: span 2;"></div>
+                <!-- 入力された文章の答え合わせ -->
+                <div class="input_area" style="grid-column: span 2;">
+                    <p id="right-align">入力文</p>
+                </div>
+                <div class="_input_area" style="grid-column: span 8;">
+                    <div id="inputArea"></div>
+                </div>
+                <div class="input_area" style="grid-column: span 2;"></div>
+                <!-- 解答と日本語訳の表示 -->
+                <div class="answer_area" style="grid-column: span 2;">
+                    <p id="right-align">解答<br>日本語訳</p>
+                </div>
+                <div class="_answer_area" style="grid-column: span 8;">
+                    <div id="answerArea"></div>
+                </div>
+                <div class="answer_area" style="grid-column: span 2;"></div>
+            </div>
+        </body>
+    </div>
+</html>
