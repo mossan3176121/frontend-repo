@@ -85,7 +85,7 @@ function reset_question(){
 async function fetchAudioData() {
     // AudioデータをDBから取得
     try {
-        const response = await fetch(API_BASE_URL);
+        const response = await fetch(`${API_BASE_URL}/api/message`);
         audio_data = await response.json();
     } catch (error) {
         console.error("エラー:", error);
