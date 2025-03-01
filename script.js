@@ -7,6 +7,9 @@ let max = 0;
 let user_input_text="";
 let accuracy=0;
 let mode = "normal"
+
+const API_BASE_URL = "https://flask-backend-jk1d.onrender.com";
+
 // show answerボタンを押したときに呼び出す関数
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("answer_button").addEventListener("click", function() {
@@ -82,7 +85,7 @@ function reset_question(){
 async function fetchAudioData() {
     // AudioデータをDBから取得
     try {
-        const response = await fetch("http://localhost:5000/audio_data/all");
+        const response = await fetch(API_BASE_URL);
         audio_data = await response.json();
     } catch (error) {
         console.error("エラー:", error);
