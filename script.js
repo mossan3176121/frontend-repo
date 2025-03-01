@@ -83,9 +83,16 @@ function reset_question(){
 }
 // 画面読み込み時にデータ取得
 async function fetchAudioData() {
+    
     // AudioデータをDBから取得
     try {
-        const response = await fetch(`${API_BASE_URL}/`);
+        const response = await fetch(`${API_BASE_URL}/audio_data/all`, {
+            // method: "GET",
+            // headers: {
+            //     "Content-Type": "application/json"
+            // }
+        });
+        // console.log("aaaa")
         audio_data = await response.json();
     } catch (error) {
         console.error("エラー:", error);
@@ -102,6 +109,7 @@ async function fetchAudioData() {
     });
     max = question_array.slice(-1);
     console.log(question_array);
+    
     set_audio();
     set_question_number();
 }
