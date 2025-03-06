@@ -1,15 +1,36 @@
-
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding-top: 20px; /* ヘッダーの高さ分の余白を追加 */
+        }
 .header {
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 1;
-    /* background-color: hsla(0, 0%, 100%, .88); */
-    /* background-color: #d86060; */
+    background-color: #d86060;
     display: grid;
-    grid-template-columns: repeat(12,1fr);
+    /* grid-template-columns: repeat(12,1fr); */
     gap: 0;
     grid-template-rows: auto auto;
 }
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: #faf8f7;
+    color: rgb(17, 17, 17);
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: top 0.3s;
+}
+
 .site_name {
     margin-inline-start: 2rem;
     border-radius: 0.25rem;
@@ -18,6 +39,7 @@
 }
 
 .grid-container{
+    margin-top: 50px;
     display: grid;
     grid-template-columns: repeat(12, 1fr); /* 12等分 */
     gap: 10px; /* グリッド間の隙間 */
@@ -34,6 +56,45 @@
 #phraseArea {
     white-space: pre-line;
 }
+/* 文字入力欄 */
+.textarea-container {
+    position: relative;
+    display: inline-block;
+    min-width: 150px;
+}
+
+textarea {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    resize: none;
+    overflow: auto;
+    display: block;
+    /* min-width: 150px; */
+}
+
+.clear-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: #aaa;
+    padding: 2px 6px;
+    border-radius: 50%;
+    display: block;
+}
+
+.clear-button:hover {
+    color: #000;
+    background: rgba(200, 200, 200, 0.8);
+}
 .text_area {
     /* background-color: #4CAF50; */
     /* color: white; */
@@ -45,56 +106,45 @@
     min-height: 100px;
     height: 150px;
 }
+.inf_area {
+    padding: 0;
+    margin: 0;
+}
 .button_area {
     /* background-color: #4CAF50; */
     padding:  0 5px;
     display: flex;
     min-height: 30px;
-    height: 40px;
+    height: 30px;
     justify-content: center;
     align-items: center;
 }
+.end_area {
+    min-height: 50px;
+}
 .answer_area {
-    /* background-color: #4CAF50; */
+    background-color: #faf8f7;
     text-align: left;
     padding: 0 10px;
     font-size: 18px;
-    min-height: 60px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
-._answer_area {
-    background-color: #f5f5ea;
-    text-align: left;
-    padding: 0 10px;
-    font-size: 18px;
-    min-height: 60px;
-    border-radius: 10px;
-}
-.input_area {
-    /* background-color: #4CAF50; */
-    text-align: left;
-    padding: 0 10px;
-    font-size: 18px;
-    min-height: 60px;
-}
-._input_area {
-    background-color: #f5f5ea;
-    text-align: left;
-    padding: 0 10px;
-    font-size: 18px;
-    min-height: 60px;
-    border-radius: 10px;
+#inputArea {
+    white-space: pre-line;
 }
 #answerArea {
     white-space: pre-line;
 }
-#inputArea {
+#JPTranseArea {
     white-space: pre-line;
 }
 
 textarea[type="text"] {
     flex: 1;
-    min-width: 280px;
-    /* max-width: 800px; */
     min-height: 100px;
     max-height: 400px;
     width: 100%;
@@ -157,9 +207,9 @@ audio {
     font-size: 0.8em;
     line-height: 0.8;
 }
-#right-align {
+#left-align {
     /* float: right; */
-    text-align: right;
+    text-align: left;
     margin: 0;
 }
 #modeArea {
