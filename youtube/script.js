@@ -10,21 +10,40 @@ let player;
 //     }
 //     });
 // }
-  window.onYouTubeIframeAPIReady = function() {
+// document.addEventListener("DOMContentLoaded",()=>)
+//   window.onYouTubeIframeAPIReady = function() {
 
-    player = new YT.Player("player", {
-    height: "315",
-    width: "560",
-    videoId: "",
-    events: {
-        onReady: () => console.log("Player ready"),
-    }
-    });
-  }
+//     player = new YT.Player("player", {
+//     height: "315",
+//     width: "560",
+//     videoId: "",
+//     events: {
+//         onReady: () => console.log("Player ready"),
+//     }
+//     });
+//   }
 
-const tag = document.createElement('script');
-tag.src = "https://www.youtube.com/iframe_api";
-document.body.appendChild(tag);
+// const tag = document.createElement('script');
+// tag.src = "https://www.youtube.com/iframe_api";
+// document.body.appendChild(tag);
+document.addEventListener("DOMContentLoaded", () => {
+    // YouTubeプレイヤー用の関数を定義
+    window.onYouTubeIframeAPIReady = function () {
+      player = new YT.Player("player", {
+        height: "315",
+        width: "560",
+        videoId: "",
+        events: {
+          onReady: () => console.log("Player ready"),
+        }
+      });
+    };
+  
+    // YouTube APIスクリプトを DOM構築後に追加
+    const tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    document.body.appendChild(tag);
+  });
 
   function extractVideoId(url) {
     const regex = /(?:v=|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
