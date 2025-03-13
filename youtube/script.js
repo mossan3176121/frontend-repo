@@ -22,6 +22,10 @@ let player;
     });
   }
 
+const tag = document.createElement('script');
+tag.src = "https://www.youtube.com/iframe_api";
+document.body.appendChild(tag);
+
   function extractVideoId(url) {
     const regex = /(?:v=|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
     const match = url.match(regex);
