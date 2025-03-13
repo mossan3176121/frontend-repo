@@ -1,5 +1,16 @@
 let player;
-function onYouTubeIframeAPIReady() {
+// function onYouTubeIframeAPIReady() {
+
+//     player = new YT.Player("player", {
+//     height: "315",
+//     width: "560",
+//     videoId: "",
+//     events: {
+//         onReady: () => console.log("Player ready"),
+//     }
+//     });
+// }
+  window.onYouTubeIframeAPIReady = function() {
 
     player = new YT.Player("player", {
     height: "315",
