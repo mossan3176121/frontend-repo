@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>YouTubeディクテーション - AdictEng 英語学習サイト</title>
+        <link rel="stylesheet" href="../style.css">  <!-- 親と同じCSSを使う場合 -->
+        <link rel="stylesheet" href="style.css">
+        <script src="https://www.youtube.com/iframe_api"></script>
+        <script src="script.js"></script>
+    </head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <h1 class="site_name">
+                <a href="../index.html">AdictEng 英語学習サイト</a>
+            </h1>
+            <!-- <a href="login/login.html" class="login-button" target="_blank">ログイン</a> -->
+        </header>
+        
+        <main>
+            <div id="urlInputArea">
+                <input type="text" id="youtubeUrl" placeholder="YouTubeのURLを入力">
+                <button onclick="loadVideo()">動画を表示</button>
+            </div>
+            <div id="mainLayout">
+                <div id="playerContainer" class="video-wrapper">
+                    <div id="player"></div>
+                </div>
+                <div id="dictationArea"></div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-links">
+                <a href="https://x.com/AdictEng57828" target="_blank">
+                    <img src="../img/x.png" alt="X (旧Twitter) ロゴ">X (旧Twitter)
+                </a>
+                <a href="https://note.com" target="_blank">
+                    <img src="../img/note.png" alt="note ロゴ">note
+                </a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

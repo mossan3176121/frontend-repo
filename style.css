@@ -1,0 +1,114 @@
+/* 全体のスタイル */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+h1 {
+    font-family: 'Merriweather', serif;
+}
+/* ヘッダー情報 */
+header {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #ddd;
+}
+.site_name a{
+    font-size: 1.5rem;
+    padding-left: 2rem;
+    color: #111;
+    text-decoration: none;
+}
+/* ログインボタン */
+.login-button {
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #111;
+}
+.login-button:hover {
+    border: 1px solid black;
+}
+
+/* メインコンテンツ */
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 3rem;
+    max-width: 800px;
+    margin: auto;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.card a {
+    text-decoration: none;
+    color: #111;
+}
+.card:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+main {
+    flex: 1;
+}
+
+/* フッター */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #faf8f7;
+    color: #111;
+    padding: 1rem;
+    margin-top: 10px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-links a {
+    color: #111;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.footer-links img {
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* 画面の高さ */
+  }
+/* レスポンシブ対応 */
+@media (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
