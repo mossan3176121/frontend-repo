@@ -1,31 +1,5 @@
 let player;
-// function onYouTubeIframeAPIReady() {
 
-//     player = new YT.Player("player", {
-//     height: "315",
-//     width: "560",
-//     videoId: "",
-//     events: {
-//         onReady: () => console.log("Player ready"),
-//     }
-//     });
-// }
-// document.addEventListener("DOMContentLoaded",()=>)
-//   window.onYouTubeIframeAPIReady = function() {
-
-//     player = new YT.Player("player", {
-//     height: "315",
-//     width: "560",
-//     videoId: "",
-//     events: {
-//         onReady: () => console.log("Player ready"),
-//     }
-//     });
-//   }
-
-// const tag = document.createElement('script');
-// tag.src = "https://www.youtube.com/iframe_api";
-// document.body.appendChild(tag);
 document.addEventListener("DOMContentLoaded", () => {
     // YouTubeプレイヤー用の関数を定義
     window.onYouTubeIframeAPIReady = function () {
@@ -63,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // 再生しないで表示だけする
     player.cueVideoById(videoId);
 
-    fetch("http://localhost:5000/get_subtitles", {
+    fetch("https://flask-backend-jk1d.onrender.com/get_subtitles", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ url })
