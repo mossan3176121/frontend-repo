@@ -9,7 +9,7 @@ let accuracy=0;
 let mode = "normal";
 let show_answer_mode = "show";
 
-const API_BASE_URL = "https://flask-backend-jk1d.onrender.com";
+const API_BASE_URL = "https://flask.adicteng.com";
 // const API_BASE_URL = "http://127.0.0.1:5000";
 
 // 答えを表示ボタンを押したときに呼び出す関数

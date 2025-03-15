@@ -37,8 +37,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // 再生しないで表示だけする
     player.cueVideoById(videoId);
 
-    fetch("https://flask-backend-jk1d.onrender.com/get_subtitles", {
-      method: "POST",
+    fetch("https://flask.adicteng.com/get_subtitles", {
+      // fetch("https://flask-backend-jk1d.onrender.com/get_subtitles", {
+        method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ url })
     })
