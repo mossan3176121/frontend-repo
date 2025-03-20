@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8YBTB93Y69"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-8YBTB93Y69');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI英会話 - AdictEng 英語学習サイト</title>
+    <link rel="stylesheet" href="../style.css">  <!-- 親と同じCSSを使う場合 -->
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <h1 class="site_name">
+                <a href="../index.html">AdictEng 英語学習サイト</a>
+            </h1>
+            <!-- <a href="login/login.html" class="login-button" target="_blank">ログイン</a> -->
+        </header>
+        
+        <main>
+            <label for="character-select">会話相手を選んでください:</label>
+            <select id="character-select">
+              <option value="tutor">英語講師</option>
+              <option value="friend">外国人の友達</option>
+              <option value="lover">恋人</option>
+              <option value="boss">上司・取引先</option>
+              <option value="airport">空港スタッフ</option>
+              <option value="waiter">カフェの店員</option>
+              <option value="random">フリートーク相手</option>
+            </select>
+            <div class="chat-box" id="chat-box">
+                <!-- 会話ログがここに表示される -->
+              </div>
+            
+              <div class="input-area">
+                <textarea id="user-input" placeholder="英語で話しかけてみよう（Shift+Enterで改行）" rows="1"></textarea>
+                <button onclick="sendMessage()">送信</button>
+                <button onclick="correctInput()">添削</button>
+              </div>
+        </main>
+    
+        <footer>
+            <div class="footer-links">
+                <a href="https://x.com/AdictEng57828" target="_blank">
+                    <img src="../img/x.png" alt="X (旧Twitter) ロゴ">X (旧Twitter)
+                </a>
+                <a href="https://note.com" target="_blank">
+                    <img src="../img/note.png" alt="note ロゴ">note
+                </a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
