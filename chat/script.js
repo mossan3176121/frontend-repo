@@ -29,7 +29,7 @@ async function sendMessage() {
 
   const character = document.getElementById("character-select").value;
 
-  const response = await fetch("http://localhost:5000/chat", {
+  const response = await fetch("https://flask.adicteng.com/chat", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ message: message, character: character })
@@ -54,7 +54,7 @@ async function correctSentence(sentence) {
   const character = document.getElementById("character-select").value;
 
   try {
-    const response = await fetch("http://localhost:5000/correct", {
+    const response = await fetch("https://flask.adicteng.com/correct", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ message: sentence, character: character })
