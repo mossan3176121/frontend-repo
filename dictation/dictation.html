@@ -18,8 +18,9 @@
     <meta property="og:title" content="英語を聞いて、書いて覚える。気軽に始める句動詞ディクテーション - AdictEng 英語学習サイト">
     <meta property="og:description" content="PHaVEリストを使って、短い例文で英語の耳を鍛える！初心者でも安心のディクテーション練習。">
     <meta property="og:url" content="https://adicteng.com/dictation/dictation">
+    <meta property="og:image" content="https://adicteng.com/img/logo.png">
     <meta property="og:type" content="website">
-    
+
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
@@ -44,7 +45,27 @@
         }
         }
     }
-    </script>        
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "ホーム",
+            "item": "https://adicteng.com/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "句動詞ディクテーション",
+            "item": "https://adicteng.com/dictation/dictation"
+        }
+        ]
+    }
+    </script>
 </head>
 <body>
     <div class="wrapper">
@@ -55,6 +76,12 @@
             <!-- <a href="login/login.html" class="login-button" target="_blank">ログイン</a> -->
         </header>
         
+        <nav class="breadcrumb" aria-label="パンくずリスト">
+            <ol>
+              <li><a href="../index.html">ホーム</a></li>
+              <li>句動詞ディクテーション</li>
+            </ol>
+        </nav>
         <main>
             <div class="grid-container">
                 <!-- 問題番号 -->

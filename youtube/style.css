@@ -39,7 +39,7 @@ input[type="text"] {
 
 #urlInputArea {
     background: #fff;
-    padding: 10px;
+    padding: 0 10px;
     /* position: sticky; */
     top: auto;
     z-index: auto;
@@ -70,7 +70,36 @@ button {
 button:hover {
     background-color: #1c6fc7;
 }
+.breadcrumb {
+    font-size: 0.9rem;
+    margin: 0.5rem 0 0.5rem;
+    padding-left: 20px;
+}
 
+.breadcrumb ol {
+list-style: none;
+display: flex;
+flex-wrap: wrap;
+gap: 0.5em;
+padding: 0;
+margin: 0;
+}
+.breadcrumb ol li a {
+    color: #888;
+    text-decoration: none;
+}
+.breadcrumb ol li a:hover {
+    color: black;
+}
+.breadcrumb li::after {
+content: "›";
+margin-left: 0.5em;
+color: #888;
+}
+
+.breadcrumb li:last-child::after {
+content: "";
+}
 
 /* スマホ対応 */
 @media (max-width: 768px) {
