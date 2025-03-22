@@ -105,7 +105,10 @@ footer {
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* 画面の高さ */
-  }
+}
+.start-section {
+    text-align: center;
+}
 /* レスポンシブ対応 */
 @media (max-width: 600px) {
     .container {
