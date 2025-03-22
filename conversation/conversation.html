@@ -14,6 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI英会話 - AdictEng 英語学習サイト</title>
     <link rel="stylesheet" href="../style.css">  <!-- 親と同じCSSを使う場合 -->
+    <script defer src="script.js"></script>
 </head>
 <body>
     <div class="wrapper">
@@ -25,7 +26,34 @@
         </header>
         
         <main>
-            <p>現在作成中です。</p>
+            <h2>🎲 会話シーンを選んでください</h2>
+            <select id="scene">
+              <option value="casual_chat">雑談</option>
+              <option value="airport">空港</option>
+              <option value="hotel">ホテル</option>
+              <option value="restaurant">レストラン</option>
+              <option value="interview">面接</option>
+              <option value="self_intro">自己紹介</option>
+              <option value="shopping">買い物</option>
+              <option value="booking">予約</option>
+              <option value="trouble">トラブル対応</option>
+            </select>
+          
+            <br><br>
+
+            <label>
+              <input type="checkbox" id="showTranslation" checked />
+              日本語訳を表示する
+            </label>
+          
+            <br><br>
+            <button id="recordBtn">🎙️ 話す</button>
+          
+            <hr>
+          
+            <div id="responseArea"></div>
+            <audio id="responseAudio" controls></audio>
+          
         </main>
     
         <footer>
