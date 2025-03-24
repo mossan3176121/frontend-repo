@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <h1 class="site_name">
+                <a href="../index.html">AdictEng 英語学習サイト</a>
+            </h1>
+            <!-- <a href="login/login.html" class="login-button" target="_blank">ログイン</a> -->
+        </header>
+        
+        <nav class="breadcrumb" aria-label="パンくずリスト">
+            <ol>
+              <li><a href="../index.html">ホーム</a></li>
+              <li>英訳チャレンジ</li>
+            </ol>
+        </nav>
+        <main>
+            <body onload="getQuestion()">
+
+            <p><strong>日本語文:</strong> <span id="question">読み込み中...</span></p>
+            <button onclick="getQuestion()">次の問題</button>
+            
+            <br><br>
+            <label for="englishInput">あなたの英訳:</label><br>
+            <textarea id="englishInput" placeholder="例: I watched a movie yesterday."></textarea><br><br>
+            
+            <button onclick="submitTranslation()">採点する</button>
+            
+            <div id="result" class="result" style="display:none;">
+                <h3>結果:</h3>
+                <p><strong>あなたの英文:</strong> <span id="original"></span></p>
+                <p><strong>添削結果:</strong> <span id="corrected"></span></p>
+                <p><strong>正誤判定:</strong> <span id="is-correct"></span></p>
+                <p><strong>フィードバック:</strong> <span id="feedback"></span></p>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-links">
+                <a href="https://x.com/AdictEng57828" target="_blank">
+                    <img src="../img/x.png" alt="X (旧Twitter) ロゴ">X (旧Twitter)
+                </a>
+                <a href="https://note.com" target="_blank">
+                    <img src="../img/note.png" alt="note ロゴ">note
+                </a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

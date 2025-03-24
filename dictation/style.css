@@ -177,12 +177,12 @@ audio {
 #modeArea {
     float: left;
 }
+
 .breadcrumb {
     font-size: 0.9rem;
     margin: 0.5rem 0 0.5rem;
     padding-left: 20px;
 }
-
 .breadcrumb ol {
 list-style: none;
 display: flex;

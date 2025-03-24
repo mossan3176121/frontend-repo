@@ -89,22 +89,7 @@ document.addEventListener("DOMContentLoaded", function() {
         set_audio();
     })
 })
-// clear ボタンを押したときに呼び出す関数
-// document.addEventListener("DOMContentLoaded", function() {
-//     document.getElementById("clear_button").addEventListener("click", function() {
-//         clear_input_area();
-//         clear_answer_area();
-//     })
-// })
-// reset ボタンを押したときに呼び出す関数
-// document.addEventListener("DOMContentLoaded", function() {
-//     document.getElementById("reset_button").addEventListener("click", function() {
-//         reset_question();
-//         clear_input_area();
-//         clear_answer_area();
-//         set_question_number();
-//     })
-// })
+
 // shuffle ボタンを押したときに呼び出す関数
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("shuffle_button").addEventListener("click", function() {
@@ -169,10 +154,11 @@ async function fetchAudioData() {
     // AudioデータをDBから取得
     try {
         const response = await fetch(`${API_BASE_URL}/audio_data/all`, {
-            // method: "GET",
-            // headers: {
-            //     "Content-Type": "application/json"
-            // }
+            method: "GET",
+            credentials: "include",
+            headers: {
+                "Content-Type": "application/json"
+            }
         });
         // console.log("aaaa")
         audio_data = await response.json();
