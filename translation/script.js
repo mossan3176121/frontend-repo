@@ -1,7 +1,7 @@
 let correctAnswer = ""; // 正解を保存する変数
   
 async function getQuestion() {
-  const res = await fetch("http://127.0.0.1:5000/get_question");
+  const res = await fetch("https://flask.adicteng.com/get_question");
   const data = await res.json();
 
   document.getElementById("question").textContent = data.japanese;
@@ -21,7 +21,7 @@ async function submitTranslation() {
     return;
   }
 
-  const response = await fetch("http://127.0.0.1:5000/evaluate", {
+  const response = await fetch("https://flask.adicteng.com/evaluate", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
