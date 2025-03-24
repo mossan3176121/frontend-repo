@@ -149,9 +149,44 @@ function reset_question(){
     }
 }
 // 画面読み込み時にデータ取得
-async function fetchAudioData() {
+// async function fetchAudioData() {
     
-    // AudioデータをDBから取得
+//     // AudioデータをDBから取得
+//     try {
+//         const response = await fetch(`${API_BASE_URL}/audio_data/all`, {
+//             method: "GET",
+//             credentials: "include",
+//             headers: {
+//                 "Content-Type": "application/json"
+//             }
+//         });
+//         // console.log("aaaa")
+//         audio_data = await response.json();
+//     } catch (error) {
+//         console.error("エラー:", error);
+//     }
+//     // const _audio = document.getElementById("audioPlayer");
+//     // _audio.load();
+    
+//     // 取得確認
+//     let text = "";
+//     audio_data.forEach(file=>{
+//         text += `ID: ${file.id}\n`;
+//         question_array.push(file.id);
+//         max = file.id;
+//     });
+//     max = question_array.slice(-1);
+//     // console.log(question_array);
+    
+//     set_audio();
+//     set_question_number();
+// }
+// // 画面読み込み時に実行する関数
+// document.addEventListener("DOMContentLoaded", () => {
+//     fetchAudioData();
+//     // clear_input_area();
+// })
+async function fetchAudioData() {
     try {
         const response = await fetch(`${API_BASE_URL}/audio_data/all`, {
             method: "GET",
@@ -160,32 +195,27 @@ async function fetchAudioData() {
                 "Content-Type": "application/json"
             }
         });
-        // console.log("aaaa")
-        audio_data = await response.json();
+
+        const text = await response.text();
+        console.log("📦 レスポンス内容（生）:", text);
+
+        if (!text) {
+            throw new Error("空のレスポンスです（JSONではありません）");
+        }
+
+        audio_data = JSON.parse(text);
+
+        // 正常に取得できた場合の処理
+        question_array = audio_data.map(file => file.id);
+        max = Math.max(...question_array);
+        set_audio();
+        set_question_number();
+
     } catch (error) {
-        console.error("エラー:", error);
+        console.error("❌ fetchAudioData エラー:", error);
     }
-    // const _audio = document.getElementById("audioPlayer");
-    // _audio.load();
-    
-    // 取得確認
-    let text = "";
-    audio_data.forEach(file=>{
-        text += `ID: ${file.id}\n`;
-        question_array.push(file.id);
-        max = file.id;
-    });
-    max = question_array.slice(-1);
-    // console.log(question_array);
-    
-    set_audio();
-    set_question_number();
 }
-// 画面読み込み時に実行する関数
-document.addEventListener("DOMContentLoaded", () => {
-    fetchAudioData();
-    // clear_input_area();
-})
+
 // 解答の出力
 function put_answer() {
     // 正解文とその日本語訳を表示
