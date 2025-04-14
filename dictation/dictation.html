@@ -1,177 +1,95 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <title>気軽に始める英語リスニング練習 - 句動詞ディクテーション | AdictEng 英語学習サイト</title>
-    <meta name="description" content="PHaVEリストに掲載されている句動詞を使って、簡単にリスニング＆ディクテーションの練習ができるページです。英語の聞き取りが不安な方でも気軽にスタートできます。">
-
-    <meta property="og:title" content="英語を聞いて、書いて覚える。気軽に始める句動詞ディクテーション - AdictEng 英語学習サイト">
-    <meta property="og:description" content="PHaVEリストを使って、短い例文で英語の耳を鍛える！初心者でも安心のディクテーション練習。">
-    <meta property="og:url" content="https://adicteng.com/dictation/dictation">
-    <meta property="og:image" content="https://adicteng.com/img/logo.png">
-    <meta property="og:type" content="website">
-
-    <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-    <!-- PHaVEディクテーションアプリの紹介 -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "頻出句動詞ディクテーション - AdictEng 英語学習サイト",
-        "url": "https://adicteng.com/dictation/dictation",
-        "description": "PHaVEリストに掲載されている句動詞を用いた例文を使って、英語のディクテーション練習ができる学習ページです。",
-        "mainEntity": {
-        "@type": "SoftwareApplication",
-        "name": "頻出句動詞ディクテーション - AdictEng 英語学習サイト",
-        "operatingSystem": "Web",
-        "applicationCategory": "EducationApplication",
-        "applicationSubCategory": "LanguageLearningApplication",
-        "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "JPY"
-        }
-        }
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-        {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "ホーム",
-            "item": "https://adicteng.com/"
-        },
-        {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "句動詞ディクテーション",
-            "item": "https://adicteng.com/dictation/dictation"
-        }
-        ]
-    }
-    </script>
-</head>
+    <head>
+        <title>ディクテーション・英会話・AI添削まで。気軽に始める英語学習アプリ - AdictEng 英語学習サイト</title>
+        <meta charset="UTF-8">
+    
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="AdictEngは、YouTube連携のディクテーション、チャット形式の英会話、英作文添削など、気軽に試せる英語学習機能をそろえたWebアプリです。勉強の第一歩をサポートします。">
+    
+        <meta property="og:title" content="AdictEng - 気軽に試せる、英語学習アプリ">
+        <meta property="og:description" content="英語を何から始めればいいか迷っている人へ。AdictEngは、ディクテーション・英会話・添削を気軽に試せる学習ツールです。">
+        <meta property="og:url" content="https://adicteng.com/">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="https://adicteng.com/img/logo.png">
+    
+        <link rel="stylesheet" href="../style.css">        
+        <link rel="stylesheet" href="style.css">
+        <script defer src="script.js"></script>
+        <script defer src="../script.js"></script>
+    </head>
 <body>
-    <div class="wrapper">
-        <header class="header">
-            <h1 class="site_name">
-                <a href="../index.html">AdictEng 英語学習サイト</a>
-            </h1>
-            <!-- <a href="login/login.html" class="login-button" target="_blank">ログイン</a> -->
-        </header>
-        
-        <nav class="breadcrumb" aria-label="パンくずリスト">
-            <ol>
-              <li><a href="../index.html">ホーム</a></li>
-              <li>句動詞ディクテーション</li>
-            </ol>
-        </nav>
-        <main>
-            <div class="grid-container">
-                <!-- 問題番号 -->
-                <div class="question_number_area" style="grid-column: span 1;"></div>
-                <div class="question_number_area" style="grid-column: span 3;">
-                    <div id="questionNumArea"></div>
-                </div>
-                <div class="question_number_area" style="grid-column: span 7;">
-                    <div id="phraseArea"></div>
-                </div>
-                <div class="question_number_area" style="grid-column: span 1;"></div>
-                <!-- 入力画面 -->
-                <div class="text_area" style="grid-column: span 1;"></div>
-                <div class="textarea-container" id="textareaContainer" style="grid-column: span 10;">
-                    <textarea id="textArea" placeholder="音声を聞き英文を入力してください..."></textarea>
-                    <button class="clear-button" id="clearBtn">✖</button>
-                </div>
-                <div class="text_area" style="grid-column: span 1;"></div>
-                <!-- 入力場面ここまで -->
-                <!-- 再生ボタンの行 -->
-                <div class="button_area" style="grid-column: span 1;"></div>
-                <div class="button_area" style="grid-column: span 10;" id="audio"></div>
-                <div class="button_area" style="grid-column: span 1;"></div>
+  <div class="wrapper">
+  <header class="header">
+    <button id="toggleBtn">☰メニュー</button>
+    <a href="../index.html" class="site-title">AdictEng 英語学習サイト</a>
+  </header>
 
-                <!-- back/next -->
-                <div class="button_area" style="grid-column: span 1;"></div>
-                <div class="button_area" style="grid-column: span 5;">
-                    <button class="custom_button" id="back_button">⬅️ 前へ</button>
-                </div>
-                <div class="button_area" style="grid-column: span 5;">
-                    <button class="custom_button" id="next_button">次へ ➡️</button>
-                </div>
-                <div class="button_area" style="grid-column: span 1;"></div>
+  <nav id="sidebar" class="sidebar closed">
+    <ul>
+      <li>
+        <!-- <li><a href="words/words.html" class="menu-link">📘 単語帳</a></li> -->
+        <a href="dictation/dictation.html" class="menu-item menu-link">📝 ディクテーション</a>
+        <ul class="submenu">
+          <li><a href="phrase/phrase.html" class="menu-link">フレーズ</a></li>
+          <li><a href="mini_conversation/mini_conversation.html" class="menu-link">ミニ英会話</a></li>
+          <li><a href="youtube/youtube.html" class="menu-link">YouTube</a></li>
+        </ul>
+      </li>
+      <!-- <li><a href="translation/translation.html" class="menu-link">📰 英訳チャレンジ</a></li> -->
+      <li><a href="chat/chat.html" class="menu-link">💬 チャット英会話</a></li>
+      <li><a href="../index.html" class="menu-link">🏡 ホーム</a></li>
+    </ul>
+  </nav>
 
-                <!-- show answer -->
-                <div class="button_area" style="grid-column: span 1;">
-                    <!-- <button class="custom_button">back</button> -->
-                </div>
-                <div class="button_area" style="grid-column: span 5;">
-                    <button class="custom_button" id="answer_button">👁 答えを表示</button>
-                </div>
-                <div class="button_area" style="grid-column: span 5;">
-                    <button class="custom_button" id="shuffle_button">🔀 ランダム</button>
-                </div>
-                <div class="button_area" style="grid-column: span 1;"></div>
-                <!-- 入力された文章の答え合わせ -->
-                <div class="inf_area" style="grid-column: span 1;"></div>
-                <div class="inf_area" style="grid-column: span 10;">
-                    <p id="left-align">入力した文章</p>
-                </div>
-                <div class="inf_area" style="grid-column: span 1;"></div>
+  <div id="overlay" class="overlay hidden"></div>
 
-                <!-- 入力した文章を表示するエリア -->
-                <div class="end_area" style="grid-column: span 1;"></div>
-                <div class="answer_area" style="grid-column: span 10;">
-                    <div id="inputArea"></div>
-                </div>
-                <div class="end_area" style="grid-column: span 1;"></div>
+  <main id="mainContent" class="main-content full-width">
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+        <ol>
+          <li><a href="../index.html">ホーム</a></li>
+          <li>ディクテーション</a></li>
+        </ol>
+    </nav>
+    <div class="container">
+      <div class="card">
+        <a href="phrase/phrase.html">
+            <h2>頻出単語・句動詞フレーズ</h2>
+            <p>英語学習は英単語から！</p>
+        </a>
+    </div>      
+    <div class="card">
+      <a href="mini_conversation/mini_conversation.html">
+          <h2>ミニ英会話</h2>
+          <p>書くだけでリスニングが身につく。まずは1文から。</p>
+      </a>
+  </div>
+      <div class="card">
+          <a href="youtube/youtube.html">
+              <h2>YouTube</h2>
+              <p>英語にちょっと慣れてきたら、AIとチャットしてみよう！</p>
+          </a>
+      </div>                
 
-                <!-- 正解文章の答え合わせ -->
-                <div class="inf_area" style="grid-column: span 1;"></div>
-                <div class="inf_area" style="grid-column: span 10;">
-                    <p id="left-align">正解の文章</p>
-                </div>
-                <div class="inf_area" style="grid-column: span 1;"></div>
-
-                <!-- 正解文章を表示するエリア -->
-                <div class="end_area" style="grid-column: span 1;"></div>
-                <div class="answer_area" style="grid-column: span 10;">
-                    <div id="answerArea"></div>
-                </div>
-                <div class="end_area" style="grid-column: span 1;"></div>
-                
-                <!-- 日本語訳 -->
-                <div class="inf_area" style="grid-column: span 1;"></div>
-                <div class="inf_area" style="grid-column: span 10;">
-                    <p id="left-align">日本語訳</p>
-                </div>
-                <div class="inf_area" style="grid-column: span 1;"></div>
-
-                <!-- 日本語を表示するエリア -->
-                <div class="end_area" style="grid-column: span 1;"></div>
-                <div class="answer_area" style="grid-column: span 10;">
-                    <div id="JPTransArea"></div>
-                </div>
-                <div class="end_area" style="grid-column: span 1;"></div>
-
-        </main>
-
-        <footer>
-            <div class="footer-links">
-                <a href="https://x.com/AdictEng57828" target="_blank">
-                    <img src="../img/x.png" alt="X (旧Twitter) ロゴ">X (旧Twitter)
-                </a>
-                <a href="https://note.com" target="_blank">
-                    <img src="../img/note.png" alt="note ロゴ">note
-                </a>
-            </div>
-        </footer>
     </div>
+
+    <section class="start-section">
+        <p>まずは気になる機能から、英語にふれてみませんか？</p>
+        <a href="dictation/dictation.html" class="start-button">はじめてみる</a>
+    </section>
+    
+  </main>
+  <footer>
+    <div class="footer-links">
+        <a href="https://www.youtube.com/@adicteng" target="_blank">
+            <img src="../img/youtube.png" alt="Youtube ロゴ">YouTube
+        </a>
+        <a href="https://note.com/cozy_dunlin3361" target="_blank">
+            <img src="../img/note.png" alt="note ロゴ">note
+        </a>
+    </div>
+</footer>
+</div>
+
 </body>
 </html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>気軽に始める英語リスニング練習 - YouTubeディクテーション | AdictEng 英語学習サイト</title>
+    <meta name="description" content="お好きなYoutube動画を用いて英語の学習ができるページです。英語の聞き取りが不安な方でも気軽にスタートできます。">
+
+    <meta property="og:title" content="お好きなYoutube動画で英語学習。気軽に始めるYoutubeディクテーション - AdictEng 英語学習サイト">
+    <meta property="og:description" content="お好きなYoutube動画で気軽に始める英語学習。">
+    <meta property="og:url" content="https://adicteng.com/dictation/dictation">
+    <meta property="og:image" content="https://adicteng.com/img/logo.png">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="../../script.js" defer></script>
+    <script src="script.js" defer></script>
+    <!-- PHaVEディクテーションアプリの紹介 -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Youtube - AdictEng 英語学習サイト",
+        "url": "https://adicteng.com/dictation/youtube/youtube",
+        "description": "お好きなYoutube動画を用いて英語の学習ができるページです。英語の聞き取りが不安な方でも気軽にスタートできます。",
+        "mainEntity": {
+        "@type": "SoftwareApplication",
+        "name": "Youtubeディクテーション - AdictEng 英語学習サイト",
+        "operatingSystem": "Web",
+        "applicationCategory": "EducationApplication",
+        "applicationSubCategory": "LanguageLearningApplication",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "JPY"
+        }
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "ホーム",
+            "item": "https://adicteng.com/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "句動詞ディクテーション",
+            "item": "https://adicteng.com/dictation/youtube/youtube"
+        }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <button id="toggleBtn">☰メニュー</button>
+            <a href="../../index.html" class="site-title">AdictEng 英語学習サイト</a>
+        </header>
+        <nav id="sidebar" class="sidebar closed">
+        <ul>
+            <li>
+            <!-- <li><a href="words/words.html" class="menu-link">📘 単語帳</a></li> -->
+            <a href="dictation/dictation.html" class="menu-item menu-link">📝 ディクテーション</a>
+            <ul class="submenu">
+                <li><a href="../phrase/phrase.html" class="menu-link">フレーズ</a></li>
+                <li><a href="../mini_conversation/mini_conversation.html" class="menu-link">ミニ英会話</a></li>
+                <li><a href="youtube.html" class="menu-link">YouTube</a></li>
+            </ul>
+            </li>
+            <!-- <li><a href="translation/translation.html" class="menu-link">📰 英訳チャレンジ</a></li> -->
+            <li><a href="../../chat/chat.html" class="menu-link">💬 チャット英会話</a></li>
+            <li><a href="../../index.html" class="menu-link">🏡 ホーム</a></li>
+        </ul>
+        </nav>
+        <div id="overlay" class="overlay hidden"></div>
+        <main id="mainContent" class="main-content full-width">
+            <nav class="breadcrumb" aria-label="パンくずリスト">
+                <ol>
+                  <li><a href="../../index.html">ホーム</a></li>
+                  <li><a href="../dictation.html">ディクテーション</a></li>
+                  <li>YouTube</li>
+                </ol>
+            </nav>
+            <div id="urlInputArea">
+                <input type="text" id="youtubeUrl" placeholder="YouTubeのURLを入力">
+                <button id="toggleBtn" onclick="loadVideo()">動画を表示</button>
+            </div>
+            <div id="mainLayout">
+                <div id="playerContainer" class="video-wrapper">
+                    <div id="player"></div>
+                </div>
+                <div id="dictationArea"></div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-links">
+                <a href="https://www.youtube.com/@adicteng" target="_blank">
+                    <img src="../../img/youtube.png" alt="Youtube ロゴ">YouTube
+                </a>
+                <a href="https://note.com/cozy_dunlin3361" target="_blank">
+                    <img src="../../img/note.png" alt="note ロゴ">note
+                </a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

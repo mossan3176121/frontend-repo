@@ -14,6 +14,7 @@
 
     <link rel="stylesheet" href="../style.css">  <!-- 親と同じCSSを使う場合 -->
     <link rel="stylesheet" href="style.css">
+    <script src="../script.js" defer></script>
     <script src="script.js" defer></script>
     <!-- チャット英会話アプリの紹介 -->
     <script type="application/ld+json">
@@ -61,46 +62,74 @@
 <body>
     <div class="wrapper">
         <header class="header">
-            <h1 class="site_name">
-                <a href="../index.html">AdictEng 英語学習サイト</a>
-            </h1>
-            <!-- <a href="login/login.html" class="login-button" target="_blank">ログイン</a> -->
+            <button id="toggleBtn">☰メニュー</button>
+            <a href="../index.html" class="site-title">AdictEng 英語学習サイト</a>
         </header>
-        
-        <nav class="breadcrumb" aria-label="パンくずリスト">
-            <ol>
-              <li><a href="../index.html">ホーム</a></li>
-              <li>チャット英会話</li>
-            </ol>
+        <nav id="sidebar" class="sidebar closed">
+        <ul>
+            <li>
+            <!-- <li><a href="words/words.html" class="menu-link">📘 単語帳</a></li> -->
+            <a href="../dictation/dictation.html" class="menu-item menu-link">📝 ディクテーション</a>
+            <ul class="submenu">
+                <li><a href="../dictation/phrase/phrase.html" class="menu-link">フレーズ</a></li>
+                <li><a href="../dictation/mini_conversation/mini_conversation.html" class="menu-link">ミニ英会話</a></li>
+                <li><a href="../dictation/youtube/youtube.html" class="menu-link">YouTube</a></li>
+            </ul>
+            </li>
+            <!-- <li><a href="translation/translation.html" class="menu-link">📰 英訳チャレンジ</a></li> -->
+            <li><a href="chat.html" class="menu-link">💬 チャット英会話</a></li>
+            <li><a href="../index.html" class="menu-link">🏡 ホーム</a></li>
+        </ul>
         </nav>
-        <main>
-            <label for="character-select">会話相手を選んでください:</label>
-            <select id="character-select">
-              <option value="tutor">英語講師</option>
-              <option value="friend">外国人の友達</option>
-              <option value="lover">恋人</option>
-              <option value="boss">上司・取引先</option>
-              <option value="airport">空港スタッフ</option>
-              <option value="waiter">カフェの店員</option>
-              <option value="random">フリートーク相手</option>
-            </select>
-            <div class="chat-box" id="chat-box">
-                <!-- 会話ログがここに表示される -->
-              </div>
-            
-              <div class="input-area">
-                <textarea id="user-input" placeholder="英語で話しかけてみよう（Shift+Enterで改行）" rows="1"></textarea>
-                <button onclick="sendMessage()">送信</button>
-                <button onclick="correctInput()">添削</button>
-              </div>
+        <div id="overlay" class="overlay hidden"></div>
+        <main id="mainContent" class="main-content full-width">
+            <nav class="breadcrumb" aria-label="パンくずリスト">
+                <ol>
+                <li><a href="../index.html">ホーム</a></li>
+                <li>チャット英会話</li>
+                </ol>
+            </nav>
+            <div class="grid-container">
+                <div style="grid-column: span 1;"></div>
+                <div style="grid-column: span 10;">
+                    <label for="character-select">会話相手を選んでください:</label>
+                    <select id="character-select">
+                      <option value="tutor">英語講師</option>
+                      <option value="friend">外国人の友達</option>
+                      <option value="lover">恋人</option>
+                      <option value="boss">上司・取引先</option>
+                      <option value="airport">空港スタッフ</option>
+                      <option value="waiter">カフェの店員</option>
+                      <option value="random">フリートーク相手</option>
+                    </select>
+                </div>
+                <div style="grid-column: span 1;"></div>
+
+                <div style="grid-column: span 1;"></div>
+                <div style="grid-column: span 10;">
+                    <div class="chat-box" id="chat-box">
+                        <!-- 会話ログがここに表示される -->
+                        </div>
+                </div>
+                <div style="grid-column: span 1;"></div>
+
+                <div style="grid-column: span 1;"></div>
+                <div style="grid-column: span 10;">
+                    <div class="input-area">
+                        <textarea id="user-input" placeholder="英語で話しかけてみよう（Shift+Enterで改行）" rows="1"></textarea>
+                        <button id="toggleBtn" onclick="sendMessage()">送信</button>
+                        <button id="toggleBtn" onclick="correctInput()">添削</button>
+                    </div>
+                </div>
+                <div style="grid-column: span 1;"></div>
+            </div>
         </main>
-    
         <footer>
             <div class="footer-links">
-                <a href="https://x.com/AdictEng57828" target="_blank">
-                    <img src="../img/x.png" alt="X (旧Twitter) ロゴ">X (旧Twitter)
+                <a href="https://www.youtube.com/@adicteng" target="_blank">
+                    <img src="../img/youtube.png" alt="Youtube ロゴ">YouTube
                 </a>
-                <a href="https://note.com" target="_blank">
+                <a href="https://note.com/cozy_dunlin3361" target="_blank">
                     <img src="../img/note.png" alt="note ロゴ">note
                 </a>
             </div>

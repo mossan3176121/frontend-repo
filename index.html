@@ -1,131 +1,147 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <title>ディクテーション・英会話・AI添削まで。気軽に始める英語学習アプリ - AdictEng 英語学習サイト</title>
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AdictEngは、YouTube連携のディクテーション、チャット形式の英会話、英作文添削など、気軽に試せる英語学習機能をそろえたWebアプリです。勉強の第一歩をサポートします。">
-
-    <meta property="og:title" content="AdictEng - 気軽に試せる、英語学習アプリ">
-    <meta property="og:description" content="英語を何から始めればいいか迷っている人へ。AdictEngは、ディクテーション・英会話・添削を気軽に試せる学習ツールです。">
-    <meta property="og:url" content="https://adicteng.com/">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://adicteng.com/img/logo.png">
-
-    <!-- <link rel="icon" href="img/logo.png" /> -->
-    <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
-    <!-- Webサイト全体の概要 -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "AdictEng",
-      "url": "https://adicteng.com/"
-    }
-    </script>
+    <head>
+        <title>ディクテーション・英会話・AI添削まで。気軽に始める英語学習アプリ - AdictEng 英語学習サイト</title>
+        <meta charset="UTF-8">
     
-    <!-- アプリ全体の紹介 + 機能のリンク -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "AdictEng 英語学習サイト",
-      "operatingSystem": "Web",
-      "applicationCategory": "EducationApplication",
-      "applicationSubCategory": "LanguageLearningApplication",
-      "url": "https://adicteng.com/",
-      "description": "AdictEngは、英語学習をサポートするWebアプリです。PHaVEリストに掲載されている句動詞を用いた英文のディクテーション、YouTube動画を活用したリスニングトレーニング、AIとのチャットによる英作文の添削機能を提供します。",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "JPY"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "AdictEng"
-      },
-      "hasPart": [
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="AdictEngは、YouTube連携のディクテーション、チャット形式の英会話など、気軽に試せる英語学習機能をそろえたWebアプリです。勉強の第一歩をサポートします。">
+    
+        <meta property="og:title" content="AdictEng - 気軽に試せる、英語学習アプリ">
+        <meta property="og:description" content="英語を何から始めればいいか迷っている人へ。AdictEngは、ディクテーション・英会話・添削を気軽に試せる学習ツールです。">
+        <meta property="og:url" content="https://adicteng.com/">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="https://adicteng.com/img/logo.png">
+    
+        <!-- <link rel="icon" href="img/logo.png" /> -->
+        <link rel="stylesheet" href="style.css">
+        <script defer src="script.js"></script>
+        <!-- Webサイト全体の概要 -->
+        <script type="application/ld+json">
         {
-          "@type": "WebPage",
-          "name": "句動詞ディクテーション",
-          "url": "https://adicteng.com/dictation/dictation"
-        },
-        {
-          "@type": "WebPage",
-          "name": "YouTubeディクテーション",
-          "url": "https://adicteng.com/youtube/youtube"
-        },
-        {
-          "@type": "WebPage",
-          "name": "AI英会話 & 添削",
-          "url": "https://adicteng.com/chat/chat"
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "AdictEng",
+          "url": "https://adicteng.com/"
         }
-      ]
-    }
-    </script>
-    
-</head>
+        </script>
+        
+        <!-- アプリ全体の紹介 + 機能のリンク -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "AdictEng 英語学習サイト",
+          "operatingSystem": "Web",
+          "applicationCategory": "EducationApplication",
+          "applicationSubCategory": "LanguageLearningApplication",
+          "url": "https://adicteng.com/",
+          "description": "AdictEngは、英語学習をサポートするWebアプリです。PHaVEリストに掲載されている句動詞を用いた英文のディクテーション、YouTube動画を活用したリスニングトレーニング、AIとのチャットによる英作文の添削機能を提供します。",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "JPY"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "AdictEng"
+          },
+          "hasPart": [
+            {
+              "@type": "WebPage",
+              "name": "句動詞ディクテーション",
+              "url": "https://adicteng.com/dictation/phrase/phrase"
+            },
+            {
+              "@type": "WebPage",
+              "name": "ミニ英会話ディクテーション",
+              "url": "https://adicteng.com/dictation/mini_conversation/mini_conversation"
+            },
+            {
+              "@type": "WebPage",
+              "name": "YouTubeディクテーション",
+              "url": "https://adicteng.com/dictation/youtube/youtube"
+            },
+            {
+              "@type": "WebPage",
+              "name": "AI英会話 & 添削",
+              "url": "https://adicteng.com/chat/chat"
+            }
+          ]
+        }
+        </script>
+        
+    </head>
 <body>
-    <div class="wrapper">
-        <header class="header">
-            <h1 class="site_name">
-                <a href="index.html">AdictEng 英語学習サイト</a>
-            </h1>
-            <!-- <a href="login/login.html" class="login-button">ログイン</a> -->
-        </header>
+  <div class="wrapper">
+  <header class="header">
+    <button id="toggleBtn">☰メニュー</button>
+    <a href="index.html" class="site-title">AdictEng 英語学習サイト</a>
+  </header>
+  <nav id="sidebar" class="sidebar closed">
+    <ul>
+      <li>
+        <!-- <li><a href="words/words.html" class="menu-link">📘 単語帳</a></li> -->
+        <a href="dictation/dictation.html" class="menu-item menu-link">📝 ディクテーション</a>
+        <ul class="submenu">
+          <li><a href="dictation/phrase/phrase.html" class="menu-link">フレーズ</a></li>
+          <li><a href="dictation/mini_conversation/mini_conversation.html" class="menu-link">ミニ英会話</a></li>
+          <li><a href="dictation/youtube/youtube.html" class="menu-link">YouTube</a></li>
+        </ul>
+      </li>
+      <!-- <li><a href="translation/translation.html" class="menu-link">📰 英訳チャレンジ</a></li> -->
+      <li><a href="chat/chat.html" class="menu-link">💬 チャット英会話</a></li>
+      <li><a href="index.html" class="menu-link">🏡 ホーム</a></li>
+    </ul>
+  </nav>
 
-        <main>
-            <div class="container">
-                <div class="card">
-                    <a href="dictation/dictation.html">
-                        <h2>🎧 ディクテーション</h2>
-                        <p>書くだけでリスニングが身につく。まずは1文から。</p>
-                    </a>
-                </div>
-                <div class="card">
-                    <a href="youtube/youtube.html">
-                        <h2>📺 YouTube英語学習</h2>
-                        <p>好きな動画で英語を勉強しよう！</p>
-                    </a>
-                </div>
-                <div class="card">
-                    <a href="chat/chat.html">
-                        <h2>✍️ チャット英会話</h2>
-                        <p>英語にちょっと慣れてきたら、AIとチャットしてみよう！</p>
-                    </a>
-                </div>                
-                <div class="card">
-                    <a href="translation/translation.html">
-                        <h2>🌐 英訳チャレンジ</h2>
-                        <p>日本語を英語で言ってみよう！書いても話してもOK。</p>
-                    </a>
-                </div>
-                <!-- <div  class="card" >
-                    <a href="conversation/conversation.html">
-                        <h2>🗣️ AI英会話
-                        </h2>
-                        <p>AIとの英会話を通して楽しくスピーキングスキルを向上させましょう！</p>
-                    </a>
-                </div> -->
-            </div>
-            <section class="start-section">
-                <p>まずは気になる機能から、英語にふれてみませんか？</p>
-                <a href="dictation/dictation.html" class="start-button">はじめてみる</a>
-            </section>
-        </main>
+  <div id="overlay" class="overlay hidden"></div>
 
-        <footer>
-            <div class="footer-links">
-                <a href="https://x.com/AdictEng57828" target="_blank">
-                    <img src="img/x.png" alt="X (旧Twitter) ロゴ">X (旧Twitter)
-                </a>
-                <a href="https://note.com" target="_blank">
-                    <img src="img/note.png" alt="note ロゴ">note
-                </a>
-            </div>
-        </footer>
+  <main id="mainContent" class="main-content full-width">
+    <div class="container">
+      <!-- <div class="card">
+        <a href="words/words.html">
+            <h2>🔤 英単語</h2>
+            <p>英語学習は英単語から！</p>
+        </a>
+      </div>       -->
+      <div class="card">
+        <a href="dictation/dictation.html">
+            <h2>🎧 ディクテーション</h2>
+            <p>書くだけでリスニングが身につく。まずは1文から。</p>
+        </a>
+      </div>
+      <div class="card">
+        <a href="chat/chat.html">
+            <h2>💬 チャット英会話</h2>
+            <p>英語にちょっと慣れてきたら、AIとチャットしてみよう！</p>
+        </a>
+      </div>                
+      <!-- <div class="card">
+        <a href="translation/translation.html">
+            <h2>🌐 英訳チャレンジ</h2>
+            <p>日本語を英語で言ってみよう！書いても話してもOK。</p>
+        </a>
+      </div> -->
     </div>
+
+    <section class="start-section">
+        <p>まずは気になる機能から、英語にふれてみませんか？</p>
+        <a href="dictation/mini_conversation/mini_conversation.html" class="start-button">はじめてみる</a>
+    </section>
+    
+  </main>
+  <footer>
+    <div class="footer-links">
+        <a href="https://www.youtube.com/@adicteng" target="_blank">
+            <img src="img/youtube.png" alt="Youtube ロゴ">YouTube
+        </a>
+        <a href="https://note.com/cozy_dunlin3361" target="_blank">
+            <img src="img/note.png" alt="note ロゴ">note
+        </a>
+    </div>
+</footer>
+</div>
+
 </body>
 </html>

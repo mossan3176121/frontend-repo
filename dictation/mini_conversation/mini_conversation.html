@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>気軽に始める英語リスニング練習 - ミニ英会話ディクテーション | AdictEng 英語学習サイト</title>
+    <meta name="description" content="1分程度のミニ英会話Youtubeを使用し、簡単にリスニング＆ディクテーションの練習ができるページです。自然な英語のやり取りが学べます。">
+
+    <meta property="og:title" content="英語を聞いて、書いて覚える。気軽に始めるミニ英会話ディクテーション - AdictEng 英語学習サイト">
+    <meta property="og:description" content="PHaVEリストを使って、短い例文で英語の耳を鍛える！初心者でも安心のディクテーション練習。">
+    <meta property="og:url" content="https://adicteng.com/dictation/mini_conversation/mini_conversation">
+    <meta property="og:image" content="https://adicteng.com/img/logo.png">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="../../script.js" defer></script>
+    <script src="script.js" defer></script>
+    <!-- PHaVEディクテーションアプリの紹介 -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "ミニ英会話ディクテーション - AdictEng 英語学習サイト",
+        "url": "https://adicteng.com/dictation/mini_conversation/mini_conversation",
+        "description": "1分程度のミニ英会話を動画を視聴し、自然な英語のやり取りを学べます。",
+        "mainEntity": {
+        "@type": "SoftwareApplication",
+        "name": "ミニ英会話ディクテーション - AdictEng 英語学習サイト",
+        "operatingSystem": "Web",
+        "applicationCategory": "EducationApplication",
+        "applicationSubCategory": "LanguageLearningApplication",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "JPY"
+        }
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "ホーム",
+            "item": "https://adicteng.com/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "ミニ英会話ディクテーション",
+            "item": "https://adicteng.com/dictation/mini_conversation/mini_conversation"
+        }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <button id="toggleBtn">☰メニュー</button>
+            <a href="../../index.html" class="site-title">AdictEng 英語学習サイト</a>
+        </header>
+        <nav id="sidebar" class="sidebar closed">
+        <ul>
+            <li>
+            <!-- <li><a href="words/words.html" class="menu-link">📘 単語帳</a></li> -->
+            <a href="dictation/dictation.html" class="menu-item menu-link">📝 ディクテーション</a>
+            <ul class="submenu">
+                <li><a href="../phrase/phrase.html" class="menu-link">フレーズ</a></li>
+                <li><a href="mini_conversation.html" class="menu-link">ミニ英会話</a></li>
+                <li><a href="../youtube/youtube.html" class="menu-link">YouTube</a></li>
+            </ul>
+            </li>
+            <!-- <li><a href="translation/translation.html" class="menu-link">📰 英訳チャレンジ</a></li> -->
+            <li><a href="../../chat/chat.html" class="menu-link">💬 チャット英会話</a></li>
+            <li><a href="../../index.html" class="menu-link">🏡 ホーム</a></li>
+        </ul>
+        </nav>
+        <div id="overlay" class="overlay hidden"></div>
+        <main id="mainContent" class="main-content full-width">
+            <nav class="breadcrumb" aria-label="パンくずリスト">
+                <ol>
+                  <li><a href="../../index.html">ホーム</a></li>
+                  <li><a href="../dictation.html">ディクテーション</a></li>
+                  <li>ミニ英会話</li>
+                </ol>
+            </nav>
+            <div class="mini_conv_container">
+                <label for="talk_place">会話場面を選んでください:</label><br>
+                <select id="talk_place" onchange="handleSelectChange(this.value)">
+                    <option value="travel_tourism_1">旅行・観光 part1（入国審査のやりとり）</option>
+                    <option value="daily_life_1">日常生活 part1（カフェでのやりとり）</option>
+                </select><br>
+                <div class="hint">👂 会話全体の内容を把握しよう：
+                    <button id="togglePlayerBtn">🎥 動画を表示</button>
+                </div>
+                <div id="playerContainer" class="video-wrapper">
+                    <div id="player"></div>
+                </div>
+                <div class="hint">👂 音声を1文ずつ聞き英文を入力しよう：</div>
+                <div class="text_area" id="textareaContainer"></div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-links">
+                <a href="https://www.youtube.com/@adicteng" target="_blank">
+                    <img src="../../img/youtube.png" alt="Youtube ロゴ">YouTube
+                </a>
+                <a href="https://note.com/cozy_dunlin3361" target="_blank">
+                    <img src="../../img/note.png" alt="note ロゴ">note
+                </a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
