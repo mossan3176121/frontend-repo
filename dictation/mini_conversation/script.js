@@ -230,7 +230,7 @@ async function handleSelectChange(selectedValue) {
 // データ送信用関数（option選択時にバックエンドに送信）
 async function sendInputData(scene_name) {
 
-  const response = await fetch("http://127.0.0.1:5000/api/submit", {
+  const response = await fetch("https://flask.adicteng.com/api/submit", {
       method: "POST",
       headers: {
           "Content-Type": "application/json",
