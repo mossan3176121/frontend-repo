@@ -15,11 +15,15 @@ window.addEventListener('load', function () {
 const sceneData = [
   {
     name: "travel_tourism_1",
-    videoUrl: "https://youtu.be/zkTGJG2zjjg",
+    videoUrl: "https://youtu.be/cDuXpB5p2Zk",
   },
   {
     name: "daily_life_1",
     videoUrl: "https://www.youtube.com/watch?v=8QicIkDjuyQ",
+  },
+  {
+    name: "travel_tourism_2",
+    videoUrl: "https://youtu.be/xBC1_8F1xiI",
   },
   // ... ここにあと98件など
 ];
