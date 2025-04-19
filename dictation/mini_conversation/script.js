@@ -25,7 +25,10 @@ const sceneData = [
     name: "travel_tourism_2",
     videoUrl: "https://youtu.be/xBC1_8F1xiI",
   },
-  // ... ここにあと98件など
+  {
+    name: "travel_tourism_3",
+    videoUrl: "https://youtu.be/fe13AxE6gP0",
+  },
 ];
 
 
